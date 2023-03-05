@@ -10,7 +10,7 @@ const MyAppoinments = () => {
     const navigate = useNavigate()
     useEffect(() => {
         if (user) {
-            fetch(`https://pacific-brushlands-52330.herokuapp.com/booking?patient=${user.email}`, {
+            fetch(`https://doctor-service-server.onrender.com/booking?patient=${user.email}`, {
                 method: 'Get',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem("accessToken")}`

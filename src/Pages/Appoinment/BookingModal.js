@@ -26,7 +26,7 @@ const BookingModal = ({ date, treatment, setTreatment, refetch }) => {
 
         }
 
-        fetch('https://pacific-brushlands-52330.herokuapp.com/booking', {
+        fetch('https://doctor-service-server.onrender.com/booking', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

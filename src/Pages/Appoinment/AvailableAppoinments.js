@@ -9,7 +9,7 @@ const AvailableAppoinments = ({ date, setDate }) => {
     // const [services, setServices] = useState([]);
     const [treatment, setTreatment] = useState(null)
     const formatedDate = format(date, 'PP');
-    const { data: services, isLoading,refetch } = useQuery(['available',formatedDate], () => fetch(`https://pacific-brushlands-52330.herokuapp.com/available?date=${formatedDate}`)
+    const { data: services, isLoading,refetch } = useQuery(['available',formatedDate], () => fetch(`https://doctor-service-server.onrender.com/available?date=${formatedDate}`)
         .then(res => res.json())
     )
     if (isLoading) {
